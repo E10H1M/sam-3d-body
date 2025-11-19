@@ -76,6 +76,13 @@ See [INSTALL.md](INSTALL.md) for instructions.
 3DB can reconstruct 3D full-body human mesh from a single image, optionally with keypoint/mask prompts and/or hand refinement from the hand decoder. For a quick start, try the following lines of code with models loaded directly from [Hugging Face](https://huggingface.co/facebook):
 
 
+⚠️ Please note that you need to request access to the checkpoints below on the Hugging Face repo. Once accepted, you need to be authenticated to download the checkpoints.
+
+**Available models:**
+- [`facebook/sam-3d-body-dinov3`](https://huggingface.co/facebook/sam-3d-body-dinov3)
+- [`facebook/sam-3d-body-vith`](https://huggingface.co/facebook/sam-3d-body-vith)
+
+
 ```python
 from sam_3d_body import load_sam_3d_body_hf, SAM3DBodyEstimator
 
@@ -105,9 +112,6 @@ python demo.py \
     --mhr_path ./checkpoints/sam-3d-body-dinov3/assets/mhr_model.pt
 ```
 
-**Available models:**
-- [`facebook/sam-3d-body-dinov3`](https://huggingface.co/facebook/sam-3d-body-dinov3)
-- [`facebook/sam-3d-body-vith`](https://huggingface.co/facebook/sam-3d-body-vith)
 
 
 For a complete demo with visualization, see [notebook/demo_human.ipynb](notebook/demo_human.ipynb).
